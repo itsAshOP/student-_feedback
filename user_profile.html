@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="description"
+        content="A secure and user-friendly platform for college students to provide feedback on courses, professors, and campus services with comprehensive analytics for administrators.">
+    <meta name="theme-color" content="#ffffff">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="robots" content="">
+    <title>User Profile</title>
+    <!-- SEO Description -->
+    <meta name="description"
+        content="A secure and user-friendly platform for college students to provide feedback on courses, professors, and campus services with comprehensive analytics for administrators.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Performance optimization: Preload critical resources -->
+    <link rel="preload" href="https://cdn.tailwindcss.com" as="script">
+
+    <!-- Header Scripts -->
+    <script id="header-scripts">
+        // This script tag will be replaced with actual scripts.head content
+        if (window.scripts && window.scripts.head) {
+            document.getElementById('header-scripts').outerHTML = window.scripts.head;
+        }
+    </script>
+
+    <!-- Preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Font stylesheet -->
+
+    <script type="application/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.8/handlebars.min.js"></script>
+
+    <!-- Core CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+
+    <!-- Utilities and Components -->
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.13.3/cdn.min.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.45.1/apexcharts.min.js"></script>
+
+    <!-- Optimized Font Loading -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Dynamic Meta Tags -->
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="robots" content="">
+    <meta name="google-site-verification" content="">
+    <meta name="baidu-verification" content="">
+    <meta name="yandex-verification" content="">
+    <meta name="bing-verification" content="">
+    <meta property="og:title" content="">
+    <meta property="og:description" content="">
+    <meta property="og:image" content="">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:site_name" content="College Feedback System">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="">
+    <meta name="twitter:description" content="">
+    <meta name="twitter:image" content="">
+
+
+    <!-- Font Links -->
+
+    <link rel="icon" type="image/x-icon" href="">
+
+    <style>
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: Roboto, sans-serif, Inter, system-ui, sans-serif;
+        }
+
+        body {
+            font-family: Open Sans, sans-serif, Inter, system-ui, sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <section id="profile" class="min-h-screen bg-gray-100 py-12 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-4xl mx-auto">
+            <div class="bg-white shadow overflow-hidden rounded-lg">
+                <!-- Profile Header -->
+                <div class="px-4 py-5 sm:px-6 bg-indigo-700 text-white">
+                    <h2 class="text-xl font-semibold">Student Profile</h2>
+                    <p class="mt-1 text-sm text-indigo-200">Personal information and preferences</p>
+                </div>
+
+                <!-- Profile Content -->
+                <div class="border-t border-gray-200">
+                    <div class="px-4 py-5 sm:p-6">
+                        <div class="flex flex-col md:flex-row">
+                            <!-- Left Column - Avatar and Basic Info -->
+                            <div class="md:w-1/3 flex flex-col items-center md:pr-8">
+                                <div class="relative">
+                                    <div
+                                        class="h-32 w-32 rounded-full overflow-hidden bg-gray-200 flex items-center justify-center">
+                                        <svg class="h-24 w-24 text-gray-400" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd"
+                                                d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"
+                                                clip-rule="evenodd"></path>
+                                        </svg>
+                                    </div>
+                                    <button
+                                        class="absolute bottom-0 right-0 bg-indigo-600 rounded-full p-1.5 text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20"
+                                            fill="currentColor">
+                                            <path fill-rule="evenodd"
+                                                d="M4 5a2 2 0 00-2 2v8a2 2 0 002 2h12a2 2 0 002-2V7a2 2 0 00-2-2h-1.586a1 1 0 01-.707-.293l-1.121-1.121A2 2 0 0011.172 3H8.828a2 2 0 00-1.414.586L6.293 4.707A1 1 0 015.586 5H4zm6 9a3 3 0 100-6 3 3 0 000 6z"
+                                                clip-rule="evenodd" />
+                                        </svg>
+                                    </button>
+                                </div>
+
+                                <div class="mt-6 text-center">
+                                    <h3 class="text-lg font-medium text-gray-900">Alex Johnson</h3>
+                                    <p class="text-sm text-gray-500">Student ID: 1234567890</p>
+                                    <p class="text-sm text-gray-500 mt-1">Computer Science</p>
+                                </div>
+
+                                <div class="mt-6 w-full">
+                                    <button type="button"
+                                        class="w-full flex justify-center py-2 px-4 border border-indigo-600 shadow-sm text-sm font-medium rounded-md text-indigo-600 bg-white hover:bg-indigo-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition duration-150 ease-in-out">
+                                        View Submission History
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- Right Column - Profile Details Form -->
+                            <div class="md:w-2/3 mt-8 md:mt-0">
+                                <form>
+                                    <div class="mb-6">
+                                        <h3 class="text-lg font-medium leading-6 text-gray-900 mb-4">Personal
+                                            Information</h3>
+                                        <div class="grid grid-cols-1 gap-y-6 gap-x-4 sm:grid-cols-6">
+                                            <div class="sm:col-span-3">
+                                                <label for="first-name"
+                                                    class="block text-sm font-medium text-gray-700">First
+                                                    name</label>
+                                                <input type="text" name="first-name" id="first-name"
+                                                    autocomplete="given-name" value="Alex"
+                                                    class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
+                                            </div>
+
+                                            <div class="sm:col-span-3">
+                                                <label for="last-name"
+                                                    class="block text-sm font-medium text-gray-700">Last
+                                                    name</label>
+                                                <input type="text" name="last-name" id="last-name"
+                                                    autocomplete="family-name" value="Johnson"
+                                                    class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
+                                            </div>
+
+                                            <div class="sm:col-span-6">
+                                                <label for="email" class="block text-sm font-medium text-gray-700">Email
+                                                    address</label>
+                                                <input type="email" name="email" id="email" autocomplete="email"
+                                                    value="alex.johnson@example.com"
+                                                    class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
+                                            </div>
+
+                                            <div class="sm:col-span-3">
+                                                <label for="program"
+                                                    class="block text-sm font-medium text-gray-700">Program</label>
+                                                <select id="program" name="program"
+                                                    class="mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md">
+                                                    <option selected>Computer Science</option>
+                                                    <option>Business Administration</option>
+                                                    <option>Engineering</option>
+                                                    <option>Arts and Humanities</option>
+                                                    <option>Science</option>
+                                                </select>
+                                            </div>
+
+                                            <div class="sm:col-span-3">
+                                                <label for="year"
+                                                    class="block text-sm font-medium text-gray-700">Year</label>
+                                                <select id="year" name="year"
+                                                    class="mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md">
+                                                    <option>1st Year</option>
+                                                    <option selected>2nd Year</option>
+                                                    <option>3rd Year</option>
+                                                    <option>4th Year</option>
+                                                    <option>Graduate</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="mb-6">
+                                        <h3 class="text-lg font-medium leading-6 text-gray-900 mb-4">Contact
+                                            Information</h3>
+                                        <div class="grid grid-cols-1 gap-y-6 gap-x-4 sm:grid-cols-6">
+                                            <div class="sm:col-span-6">
+                                                <label for="phone" class="block text-sm font-medium text-gray-700">Phone
+                                                    number</label>
+                                                <input type="tel" name="phone" id="phone" autocomplete="tel"
+                                                    value="(555) 123-4567"
+                                                    class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="mb-6">
+                                        <h3 class="text-lg font-medium leading-6 text-gray-900 mb-4">Security</h3>
+                                        <div class="grid grid-cols-1 gap-y-6 gap-x-4 sm:grid-cols-6">
+                                            <div class="sm:col-span-3">
+                                                <label for="current-password"
+                                                    class="block text-sm font-medium text-gray-700">Current
+                                                    password</label>
+                                                <input type="password" name="current-password" id="current-password"
+                                                    autocomplete="current-password" placeholder="••••••••"
+                                                    class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
+                                            </div>
+
+                                            <div class="sm:col-span-3">
+                                                <label for="new-password"
+                                                    class="block text-sm font-medium text-gray-700">New
+                                                    password</label>
+                                                <input type="password" name="new-password" id="new-password"
+                                                    autocomplete="new-password" placeholder="••••••••"
+                                                    class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="mb-6">
+                                        <h3 class="text-lg font-medium leading-6 text-gray-900 mb-4">Preferences
+                                        </h3>
+                                        <div class="mt-4 space-y-4">
+                                            <div class="flex items-start">
+                                                <div class="flex items-center h-5">
+                                                    <input id="notification-email" name="notification-email"
+                                                        type="checkbox" checked
+                                                        class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded">
+                                                </div>
+                                                <div class="ml-3 text-sm">
+                                                    <label for="notification-email"
+                                                        class="font-medium text-gray-700">Email
+                                                        Notifications</label>
+                                                    <p class="text-gray-500">Receive email notifications about
+                                                        feedback submission
+                                                        deadlines.</p>
+                                                </div>
+                                            </div>
+                                            <div class="flex items-start">
+                                                <div class="flex items-center h-5">
+                                                    <input id="notification-reminder" name="notification-reminder"
+                                                        type="checkbox" checked
+                                                        class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded">
+                                                </div>
+                                                <div class="ml-3 text-sm">
+                                                    <label for="notification-reminder"
+                                                        class="font-medium text-gray-700">Reminder
+                                                        Notifications</label>
+                                                    <p class="text-gray-500">Receive reminder notifications before
+                                                        deadlines.</p>
+                                                </div>
+                                            </div>
+                                            <div class="flex items-start">
+                                                <div class="flex items-center h-5">
+                                                    <input id="dark-mode" name="dark-mode" type="checkbox"
+                                                        class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded">
+                                                </div>
+                                                <div class="ml-3 text-sm">
+                                                    <label for="dark-mode" class="font-medium text-gray-700">Dark
+                                                        Mode</label>
+                                                    <p class="text-gray-500">Enable dark mode for the interface.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Form Actions -->
+                    <div class="px-4 py-3 bg-gray-50 text-right sm:px-6 flex justify-end space-x-3">
+                        <button type="button"
+                            class="inline-flex justify-center py-2 px-4 border border-gray-300 shadow-sm text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                            Cancel
+                        </button>
+                        <button type="submit"
+                            class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                            Save Changes
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Danger Zone -->
+            <div class="mt-10 bg-white shadow overflow-hidden rounded-lg">
+                <div class="px-4 py-5 sm:px-6 bg-red-600 text-white">
+                    <h2 class="text-xl font-semibold">Danger Zone</h2>
+                    <p class="mt-1 text-sm text-red-200">Actions in this section are irreversible</p>
+                </div>
+                <div class="px-4 py-5 sm:p-6">
+                    <div class="space-y-6">
+                        <div>
+                            <h3 class="text-lg font-medium leading-6 text-gray-900">Delete Account</h3>
+                            <div class="mt-2 max-w-xl text-sm text-gray-500">
+                                <p>Once you delete your account, all of your data will be permanently removed. This
+                                    action cannot
+                                    be undone.</p>
+                            </div>
+                            <div class="mt-3">
+                                <button type="button"
+                                    class="inline-flex items-center justify-center px-4 py-2 border border-transparent font-medium rounded-md text-red-700 bg-red-100 hover:bg-red-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500 sm:text-sm">
+                                    Delete Account
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

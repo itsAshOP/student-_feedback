@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="description"
+        content="A secure and user-friendly platform for college students to provide feedback on courses, professors, and campus services with comprehensive analytics for administrators.">
+    <meta name="theme-color" content="#ffffff">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="robots" content="">
+    <title>Form</title>
+    <!-- SEO Description -->
+    <meta name="description"
+        content="A secure and user-friendly platform for college students to provide feedback on courses, professors, and campus services with comprehensive analytics for administrators.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Performance optimization: Preload critical resources -->
+    <link rel="preload" href="https://cdn.tailwindcss.com" as="script">
+
+    <!-- Header Scripts -->
+    <script id="header-scripts">
+        // This script tag will be replaced with actual scripts.head content
+        if (window.scripts && window.scripts.head) {
+            document.getElementById('header-scripts').outerHTML = window.scripts.head;
+        }
+    </script>
+
+    <!-- Preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Font stylesheet -->
+
+    <script type="application/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.8/handlebars.min.js"></script>
+
+    <!-- Core CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+
+    <!-- Utilities and Components -->
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.13.3/cdn.min.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.45.1/apexcharts.min.js"></script>
+
+    <!-- Optimized Font Loading -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Dynamic Meta Tags -->
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="robots" content="">
+    <meta name="google-site-verification" content="">
+    <meta name="baidu-verification" content="">
+    <meta name="yandex-verification" content="">
+    <meta name="bing-verification" content="">
+    <meta property="og:title" content="">
+    <meta property="og:description" content="">
+    <meta property="og:image" content="">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:site_name" content="College Feedback System">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="">
+    <meta name="twitter:description" content="">
+    <meta name="twitter:image" content="">
+
+
+    <!-- Font Links -->
+
+    <link rel="icon" type="image/x-icon" href="">
+
+    <style>
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: Roboto, sans-serif, Inter, system-ui, sans-serif;
+        }
+
+        body {
+            font-family: Open Sans, sans-serif, Inter, system-ui, sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <section id="feedbackForm" class="min-h-screen bg-gray-100 py-12 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-4xl mx-auto bg-white rounded-lg shadow-md overflow-hidden">
+            <!-- Header with progress bar -->
+            <div class="bg-indigo-700 px-6 py-4">
+                <div class="flex justify-between items-center">
+                    <h1 class="text-xl font-bold text-white">Course Feedback Form</h1>
+                    <span class="text-sm text-indigo-100">30% Complete</span>
+                </div>
+                <div class="w-full bg-indigo-900 rounded-full h-2.5 mt-2">
+                    <div class="bg-yellow-400 h-2.5 rounded-full" style="width: 30%"></div>
+                </div>
+            </div>
+
+            <!-- Form Content -->
+            <form class="px-6 py-8">
+                <!-- Introduction -->
+                <div class="mb-8">
+                    <p class="text-gray-600 mb-4">Your feedback helps us improve our courses and teaching methods.
+                        Please
+                        take a few minutes to complete this form. All responses are anonymous.</p>
+                </div>
+
+                <!-- Course Information -->
+                <div class="mb-10">
+                    <h2 class="text-lg font-semibold text-gray-800 mb-4 pb-2 border-b border-gray-200">Course
+                        Information
+                    </h2>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label for="course-code" class="block text-sm font-medium text-gray-700 mb-1">Course
+                                Code</label>
+                            <select id="course-code" name="course-code"
+                                class="w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500">
+                                <option value="" selected disabled>Select course code</option>
+                                <option value="CS101">CS101 - Introduction to Programming</option>
+                                <option value="CS201">CS201 - Data Structures</option>
+                                <option value="CS301">CS301 - Database Systems</option>
+                                <option value="CS401">CS401 - Machine Learning</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label for="instructor"
+                                class="block text-sm font-medium text-gray-700 mb-1">Instructor</label>
+                            <select id="instructor" name="instructor"
+                                class="w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500">
+                                <option value="" selected disabled>Select instructor</option>
+                                <option value="prof-smith">Prof. Smith</option>
+                                <option value="prof-johnson">Prof. Johnson</option>
+                                <option value="prof-williams">Prof. Williams</option>
+                                <option value="prof-davis">Prof. Davis</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Course Content Rating -->
+                <div class="mb-10">
+                    <h2 class="text-lg font-semibold text-gray-800 mb-4 pb-2 border-b border-gray-200">Course
+                        Content</h2>
+
+                    <div class="space-y-6">
+                        <div>
+                            <p class="text-sm font-medium text-gray-700 mb-2">The course objectives were clearly
+                                defined</p>
+                            <div class="flex flex-wrap gap-4">
+                                <label class="inline-flex items-center">
+                                    <input type="radio" name="objectives" value="1"
+                                        class="form-radio text-indigo-600 focus:ring-indigo-500 h-4 w-4">
+                                    <span class="ml-2 text-sm text-gray-700">Strongly Disagree</span>
+                                </label>
+                                <label class="inline-flex items-center">
+                                    <input type="radio" name="objectives" value="2"
+                                        class="form-radio text-indigo-600 focus:ring-indigo-500 h-4 w-4">
+                                    <span class="ml-2 text-sm text-gray-700">Disagree</span>
+                                </label>
+                                <label class="inline-flex items-center">
+                                    <input type="radio" name="objectives" value="3"
+                                        class="form-radio text-indigo-600 focus:ring-indigo-500 h-4 w-4">
+                                    <span class="ml-2 text-sm text-gray-700">Neutral</span>
+                                </label>
+                                <label class="inline-flex items-center">
+                                    <input type="radio" name="objectives" value="4"
+                                        class="form-radio text-indigo-600 focus:ring-indigo-500 h-4 w-4">
+                                    <span class="ml-2 text-sm text-gray-700">Agree</span>
+                                </label>
+                                <label class="inline-flex items-center">
+                                    <input type="radio" name="objectives" value="5"
+                                        class="form-radio text-indigo-600 focus:ring-indigo-500 h-4 w-4">
+                                    <span class="ml-2 text-sm text-gray-700">Strongly Agree</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div>
+                            <p class="text-sm font-medium text-gray-700 mb-2">The course materials were relevant and
+                                useful</p>
+                            <div class="flex flex-wrap gap-4">
+                                <label class="inline-flex items-center">
+                                    <input type="radio" name="materials" value="1"
+                                        class="form-radio text-indigo-600 focus:ring-indigo-500 h-4 w-4">
+                                    <span class="ml-2 text-sm text-gray-700">Strongly Disagree</span>
+                                </label>
+                                <label class="inline-flex items-center">
+                                    <input type="radio" name="materials" value="2"
+                                        class="form-radio text-indigo-600 focus:ring-indigo-500 h-4 w-4">
+                                    <span class="ml-2 text-sm text-gray-700">Disagree</span>
+                                </label>
+                                <label class="inline-flex items-center">
+                                    <input type="radio" name="materials" value="3"
+                                        class="form-radio text-indigo-600 focus:ring-indigo-500 h-4 w-4">
+                                    <span class="ml-2 text-sm text-gray-700">Neutral</span>
+                                </label>
+                                <label class="inline-flex items-center">
+                                    <input type="radio" name="materials" value="4"
+                                        class="form-radio text-indigo-600 focus:ring-indigo-500 h-4 w-4">
+                                    <span class="ml-2 text-sm text-gray-700">Agree</span>
+                                </label>
+                                <label class="inline-flex items-center">
+                                    <input type="radio" name="materials" value="5"
+                                        class="form-radio text-indigo-600 focus:ring-indigo-500 h-4 w-4">
+                                    <span class="ml-2 text-sm text-gray-700">Strongly Agree</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div>
+                            <p class="text-sm font-medium text-gray-700 mb-2">The course difficulty was appropriate
+                            </p>
+                            <div class="flex flex-wrap gap-4">
+                                <label class="inline-flex items-center">
+                                    <input type="radio" name="difficulty" value="1"
+                                        class="form-radio text-indigo-600 focus:ring-indigo-500 h-4 w-4">
+                                    <span class="ml-2 text-sm text-gray-700">Strongly Disagree</span>
+                                </label>
+                                <label class="inline-flex items-center">
+                                    <input type="radio" name="difficulty" value="2"
+                                        class="form-radio text-indigo-600 focus:ring-indigo-500 h-4 w-4">
+                                    <span class="ml-2 text-sm text-gray-700">Disagree</span>
+                                </label>
+                                <label class="inline-flex items-center">
+                                    <input type="radio" name="difficulty" value="3"
+                                        class="form-radio text-indigo-600 focus:ring-indigo-500 h-4 w-4">
+                                    <span class="ml-2 text-sm text-gray-700">Neutral</span>
+                                </label>
+                                <label class="inline-flex items-center">
+                                    <input type="radio" name="difficulty" value="4"
+                                        class="form-radio text-indigo-600 focus:ring-indigo-500 h-4 w-4">
+                                    <span class="ml-2 text-sm text-gray-700">Agree</span>
+                                </label>
+                                <label class="inline-flex items-center">
+                                    <input type="radio" name="difficulty" value="5"
+                                        class="form-radio text-indigo-600 focus:ring-indigo-500 h-4 w-4">
+                                    <span class="ml-2 text-sm text-gray-700">Strongly Agree</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Instructor Evaluation -->
+                <div class="mb-10">
+                    <h2 class="text-lg font-semibold text-gray-800 mb-4 pb-2 border-b border-gray-200">Instructor
+                        Evaluation
+                    </h2>
+
+                    <div class="space-y-6">
+                        <div>
+                            <p class="text-sm font-medium text-gray-700 mb-2">The instructor was knowledgeable about
+                                the course
+                                material</p>
+                            <div class="flex items-center">
+                                <input type="range" min="1" max="5" value="3"
+                                    class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer"
+                                    name="instructor-knowledge">
+                                <div class="ml-4 flex justify-between text-xs w-24 text-gray-600">
+                                    <span>Poor</span>
+                                    <span>Excellent</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <p class="text-sm font-medium text-gray-700 mb-2">The instructor was well-prepared for
+                                each class
+                            </p>
+                            <div class="flex items-center">
+                                <input type="range" min="1" max="5" value="3"
+                                    class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer"
+                                    name="instructor-preparation">
+                                <div class="ml-4 flex justify-between text-xs w-24 text-gray-600">
+                                    <span>Poor</span>
+                                    <span>Excellent</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <p class="text-sm font-medium text-gray-700 mb-2">The instructor was responsive to
+                                student questions
+                            </p>
+                            <div class="flex items-center">
+                                <input type="range" min="1" max="5" value="3"
+                                    class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer"
+                                    name="instructor-responsive">
+                                <div class="ml-4 flex justify-between text-xs w-24 text-gray-600">
+                                    <span>Poor</span>
+                                    <span>Excellent</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Multiple Choice Questions -->
+                <div class="mb-10">
+                    <h2 class="text-lg font-semibold text-gray-800 mb-4 pb-2 border-b border-gray-200">Learning
+                        Experience
+                    </h2>
+
+                    <div class="space-y-6">
+                        <div>
+                            <p class="text-sm font-medium text-gray-700 mb-2">How would you rate the overall quality
+                                of this
+                                course?</p>
+                            <select name="overall-quality"
+                                class="w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500">
+                                <option value="" selected disabled>Select your answer</option>
+                                <option value="excellent">Excellent</option>
+                                <option value="very-good">Very Good</option>
+                                <option value="good">Good</option>
+                                <option value="fair">Fair</option>
+                                <option value="poor">Poor</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <p class="text-sm font-medium text-gray-700 mb-2">Which aspects of the course were most
+                                beneficial
+                                to your learning? (Select all that apply)</p>
+                            <div class="space-y-2">
+                                <label class="inline-flex items-center">
+                                    <input type="checkbox" name="beneficial-aspects" value="lectures"
+                                        class="form-checkbox text-indigo-600 focus:ring-indigo-500 h-4 w-4">
+                                    <span class="ml-2 text-sm text-gray-700">Lectures</span>
+                                </label>
+                                <div class="block">
+                                    <label class="inline-flex items-center">
+                                        <input type="checkbox" name="beneficial-aspects" value="discussions"
+                                            class="form-checkbox text-indigo-600 focus:ring-indigo-500 h-4 w-4">
+                                        <span class="ml-2 text-sm text-gray-700">Group Discussions</span>
+                                    </label>
+                                </div>
+                                <div class="block">
+                                    <label class="inline-flex items-center">
+                                        <input type="checkbox" name="beneficial-aspects" value="assignments"
+                                            class="form-checkbox text-indigo-600 focus:ring-indigo-500 h-4 w-4">
+                                        <span class="ml-2 text-sm text-gray-700">Assignments</span>
+                                    </label>
+                                </div>
+                                <div class="block">
+                                    <label class="inline-flex items-center">
+                                        <input type="checkbox" name="beneficial-aspects" value="projects"
+                                            class="form-checkbox text-indigo-600 focus:ring-indigo-500 h-4 w-4">
+                                        <span class="ml-2 text-sm text-gray-700">Projects</span>
+                                    </label>
+                                </div>
+                                <div class="block">
+                                    <label class="inline-flex items-center">
+                                        <input type="checkbox" name="beneficial-aspects" value="readings"
+                                            class="form-checkbox text-indigo-600 focus:ring-indigo-500 h-4 w-4">
+                                        <span class="ml-2 text-sm text-gray-700">Required Readings</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Open Text Fields -->
+                <div class="mb-10">
+                    <h2 class="text-lg font-semibold text-gray-800 mb-4 pb-2 border-b border-gray-200">Additional
+                        Feedback
+                    </h2>
+
+                    <div class="space-y-6">
+                        <div>
+                            <label for="strengths" class="block text-sm font-medium text-gray-700 mb-1">What were
+                                the strengths
+                                of this course?</label>
+                            <textarea id="strengths" name="strengths" rows="3"
+                                class="w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"></textarea>
+                        </div>
+
+                        <div>
+                            <label for="improvements" class="block text-sm font-medium text-gray-700 mb-1">What
+                                aspects of this
+                                course could be improved?</label>
+                            <textarea id="improvements" name="improvements" rows="3"
+                                class="w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"></textarea>
+                        </div>
+
+                        <div>
+                            <label for="comments" class="block text-sm font-medium text-gray-700 mb-1">Any
+                                additional comments
+                                or suggestions?</label>
+                            <textarea id="comments" name="comments" rows="3"
+                                class="w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"></textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Navigation Buttons -->
+                <div class="flex justify-between pt-6 border-t border-gray-200">
+                    <button type="button"
+                        class="inline-flex items-center px-4 py-2 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition duration-150 ease-in-out">
+                        <svg class="-ml-1 mr-2 h-5 w-5 text-gray-500" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd"
+                                d="M9.707 16.707a1 1 0 01-1.414 0l-6-6a1 1 0 010-1.414l6-6a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l4.293 4.293a1 1 0 010 1.414z"
+                                clip-rule="evenodd" />
+                        </svg>
+                        Previous
+                    </button>
+
+                    <div class="flex space-x-3">
+                        <button type="button"
+                            class="inline-flex items-center px-4 py-2 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition duration-150 ease-in-out">
+                            Save Draft
+                        </button>
+
+                        <button type="button"
+                            class="inline-flex items-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition duration-150 ease-in-out">
+                            Next
+                            <svg class="-mr-1 ml-2 h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
+                                fill="currentColor">
+                                <path fill-rule="evenodd"
+                                    d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+</body>
+
+</html>
